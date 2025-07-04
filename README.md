@@ -34,4 +34,15 @@ This is my personal portfolio showcasing my web development, full-stack projects
 
 ---
 
-> Designed and developed with 💖 by Lahari M
+@"
+
+# Lahari M – Developer Portfolio
+
+This is my personal portfolio website showcasing my projects, skills, and certifications.
+
+## 🚫 License
+
+This project is protected under a custom license.  
+Unauthorized use is strictly prohibited.  
+See [LICENSE](./LICENSE) for more info.
+"@ | Out-File -Encoding utf8 README.md
