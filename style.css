@@ -1,0 +1,425 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom right, #fff1f8, #fdf4ff);
+  color: #2e2e2e;
+  margin: 0;
+  padding: 0;
+  background-attachment: fixed;
+}
+.text-muted.fw-semibold {
+  font-size: 1rem;
+  color: #6b7280; /* Tailwind gray-600 */
+}
+
+/* --- NAVBAR --- */
+.navbar {
+  background: rgba(255, 255, 255, 0.7); /* Glass look */
+  backdrop-filter: blur(10px); /* Smooth blur effect */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: background 0.3s ease;
+}
+
+/* Brand Gradient Text */
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: linear-gradient(to right, #ec4899, #8b5cf6); /* Pink to violet */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+}
+
+/* Nav Links */
+.navbar-nav .nav-link {
+  font-weight: 500;
+  color: #1f2937; /* Slate Gray */
+  margin-left: 15px;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #ec4899; /* Highlight color */
+}
+.navbar.dark {
+  background: rgba(15, 23, 42, 0.9); /* Dark glass */
+}
+
+.navbar.dark .nav-link {
+  color: #f3f4f6;
+}
+
+.navbar.dark .nav-link:hover {
+  color: #f9a8d4;
+}
+
+/* Toggler Icon */
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/* --- HERO SECTION --- */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(
+      to bottom right,
+      rgba(255, 241, 248, 0.9),
+      rgba(253, 244, 255, 0.9)
+    ),
+    url("assets/images/me.jpg") center/cover no-repeat;
+  background-blend-mode: lighten;
+}
+
+/* --- GRADIENT NAME --- */
+.hero h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  background: linear-gradient(to right, #ec4899, #8b5cf6); /* pink to violet */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+}
+
+/* --- SUBTEXT --- */
+
+.hero p {
+  font-size: 1.35rem;
+  font-weight: 600; /* Bold font */
+  color: #334155; /* Dark slate for good contrast */
+  line-height: 1.9;
+  max-width: 720px;
+  margin: 0 auto 2rem auto;
+  text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.05); /* subtle depth */
+}
+
+/* --- BUTTONS --- */
+.hero .btn-primary {
+  background: linear-gradient(to right, #ec4899, #8b5cf6);
+  border: none;
+  color: white;
+  font-weight: 600;
+  border-radius: 30px;
+  padding: 0.75rem 2rem;
+  transition: all 0.3s ease;
+}
+
+.hero .btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #ec4899;
+}
+
+.hero .btn-outline-secondary {
+  background: transparent;
+  color: #ec4899;
+  border: 2px solid #ec4899;
+  border-radius: 30px;
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  margin-left: 1rem;
+  transition: all 0.3s ease;
+}
+
+.hero .btn-outline-secondary:hover {
+  background: #ec4899;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Optional: Arrow animation below hero */
+.hero::after {
+  content: "↓";
+  font-size: 1.5rem;
+  color: #ec4899;
+  animation: bounce 2s infinite;
+  margin-top: 2rem;
+}
+
+/* Section Title */
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(to right, #ec4899, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #d946ef;
+  margin: 10px auto 0 auto;
+  border-radius: 3px;
+}
+
+/* Gradient Border Around Image */
+.border-gradient {
+  border-image: linear-gradient(to right, #ec4899, #8b5cf6) 1;
+}
+
+/* Skill Pills */
+.skill-pill {
+  background: white;
+  border-radius: 0.75rem;
+  padding: 0.6rem 1.2rem;
+  box-shadow: 3px 3px 0 #f472b6;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.skill-pill:hover {
+  transform: translateY(-3px);
+  box-shadow: 5px 5px 0 #c084fc;
+}
+/* Project Card Style */
+.project-card {
+  background: white;
+  border: none;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Heading Color */
+.text-pink {
+  color: #d63384;
+}
+
+/* Pill Tags */
+.tag-pill {
+  background: #f3e8ff;
+  color: #6b21a8;
+  padding: 0.4rem 1rem;
+  border-radius: 30px;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+/* Buttons */
+.btn-code {
+  border: 2px solid #e879f9;
+  color: #e879f9;
+  background-color: white;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-code:hover {
+  background: #e879f9;
+  color: white;
+}
+
+.demo-section {
+  background: linear-gradient(to bottom right, #fff1f8, #fdf4ff);
+  padding: 4rem 1rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(to right, #ec4899, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #ec4899, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.video-player {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+  border: none;
+  border-radius: 20px;
+}
+
+.video-wrapper {
+  background-color: #000;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.skill-card {
+  background: linear-gradient(to top left, #fff1f8, #fdf4ff);
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%; /* Ensures equal height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (max-width: 576px) {
+  .skill-card {
+    padding: 1.5rem;
+  }
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #ec4899, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(to right, #ec4899, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.cert-card {
+  background: linear-gradient(to top left, #fff1f8, #fdf4ff);
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cert-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.btn-download {
+  background: linear-gradient(to right, #ec4899, #8b5cf6);
+  color: white;
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.btn-download:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #ec4899;
+  color: white;
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #ec4899, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(to right, #ec4899, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* Light Pink Background */
+.bg-light-pink {
+  background: linear-gradient(to right, #fff1f8, #fdf4ff);
+}
+
+/* Resume Download Button */
+.btn-resume-download {
+  background: linear-gradient(to right, #ec4899, #8b5cf6);
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 30px;
+  padding: 0.75rem 2rem;
+  transition: all 0.3s ease;
+}
+
+.btn-resume-download:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(236, 72, 153, 0.4);
+}
+
+/* Resume Card Styling */
+.resume-card {
+  border: none;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.resume-card:hover {
+  transform: translateY(-5px);
+}
+
+.icon-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg-gradient-pink {
+  background: linear-gradient(135deg, #ec4899, #8b5cf6);
+}
+
+.contact-card {
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(236, 72, 153, 0.2);
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(to right, #ec4899, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* Custom arrow styling */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-image: none;
+  color: #ec4899;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-control-prev-icon::after {
+  content: "‹";
+  font-size: 3rem;
+  color: #080808;
+  font-weight: 900;
+  font-family: Arial Black, sans-serif;
+}
+
+.carousel-control-next-icon::after {
+  content: "›";
+  font-size: 3rem;
+  color: #080808;
+  font-weight: 900;
+  font-family: Arial Black, sans-serif;
+}
